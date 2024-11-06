@@ -28,14 +28,22 @@ function Header() {
         </li>
       </ul>
 
-      {isSignedIn ? (
-        <div className="flex items-center gap-5">
-          <UserButton />
+      <div className="flex justify-between items-center gap-2 shadow-sm p-5">
+        {/* <div>
+          <SignInButton mode="modal">
+            <Button>SIGN IN</Button>
+          </SignInButton>
+        </div> */}
+
+        {isSignedIn ? (
+          <div className="flex items-center gap-5">
+            <UserButton />
+            <Button>Submit Listing</Button>
+          </div>
+        ) : (
           <Button>Submit Listing</Button>
-        </div>
-      ) : (
-        <Button>Submit Listing</Button>
-      )}
+        )}
+      </div>
     </div>
   );
 }
